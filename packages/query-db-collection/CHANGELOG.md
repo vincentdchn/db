@@ -1,5 +1,11 @@
 # @tanstack/query-db-collection
 
+## 1.4.8
+
+### Patch Changes
+
+- Keep a reacquired Query's cached rows when an earlier release of the same Query publishes later. Previously, reacquiring a stale on-demand Query while its release waited behind another sync transaction could drop its rows, and they stayed missing if the refetch failed. ([#2206](https://github.com/TanStack/db/pull/2206))
+
 ## 1.4.7
 
 ### Patch Changes
